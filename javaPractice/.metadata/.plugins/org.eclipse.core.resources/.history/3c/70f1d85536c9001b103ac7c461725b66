@@ -1,0 +1,13 @@
+
+public class Example {
+	public static void main(String[] args) {
+		//initial values
+		int i = 100;
+		//cast to short
+		short s =(short)i;
+		System.out.println(s);
+		//cast to double
+		double d = (double)i;
+		System.out.println(d);
+	}
+}

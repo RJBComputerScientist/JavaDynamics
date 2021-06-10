@@ -1,0 +1,13 @@
+
+public class StringConcatenation {
+	public static void main(String[] args) {
+		String beginning = "Hello";
+		String end = " World";
+		String combo = beginning+end;
+		System.out.println(combo);
+		long L = 203L;
+		System.out.println("The Value of l: "+L);
+		boolean b = true;
+		System.out.println(b+"is true");
+	}
+}
