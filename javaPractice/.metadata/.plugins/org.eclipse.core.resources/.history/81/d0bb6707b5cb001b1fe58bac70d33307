@@ -1,0 +1,155 @@
+package main;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class Converter {
+	static Scanner scan = new Scanner(System.in);
+
+	private static void MoreThan(int selection) {
+		System.out.println("You Picked " + "'" + selection + "'" + " Ins't a option right now");
+	}
+
+	private static void EqualToOne(int selection) {
+		System.out.println("You Picked " + "'" + selection + "'" + " How many US DOLLARS do you have?");
+	}
+
+	private static void EqualToTwo(int selection) {
+		System.out.println("You Picked " + "'" + selection + "'" + " How many EUROS do you have?");
+	}
+
+	private static void Options() {
+		System.out.println("1. US Dollars");
+		System.out.println("2. EUROS");
+		System.out.println("Pressing '3' will end the unit converter application");
+	}
+
+	// Conversions
+	private static void conversion(int input, double conversion) {
+		DecimalFormat df = new DecimalFormat("#.00");
+		String formatted = df.format(conversion);
+		System.out.println("CONVERSION!!! Your " + input + " is converted to " + formatted);
+	}
+
+	public static double UStoEURO(int number) {
+		return number * .83;
+	}
+
+	public static double EUROtoUS(int number) {
+		return number * 1.21;
+	}
+	
+//	public static void UnitConverge() {
+//		
+//		Options();
+//		try {
+//
+//			int menuSelection;
+//			menuSelection = scan.nextInt();
+//
+//
+//			while (menuSelection != 3) {
+//
+//				int v = 0;
+//				switch (menuSelection) {
+//				case 1:
+//					EqualToOne(menuSelection);	
+//					v = scan.nextInt();
+//					conversion(v, UStoEURO(v));
+//					break;
+//				case 2:
+//					EqualToTwo(menuSelection);
+//					v = scan.nextInt();
+//					conversion(v, EUROtoUS(v));
+//					break;
+//				default:
+//					MoreThan(menuSelection);
+//					System.out.println("Not a valid Number");
+//				}
+//				System.out.print("Convert again? yes or no ");
+//				String goAgain = scan.next();
+//				if (goAgain.equals("yes")) { // continue start the loop over from the beginning
+//					Options();
+//					menuSelection = scan.nextInt();
+//					continue;
+//				} else if (goAgain.equals("no")) {
+//					System.out.println("You Have Closed The Unit Converter");
+//					break;
+//				}
+//			}
+//			if (menuSelection == 3) {
+//				System.out.println("GoodBye!");
+//			}
+//			
+//		} catch (InputMismatchException e) {
+//			System.out.println("This isn't a valid entry");
+//			System.out.println("\nTRY AGAIN");
+////			scan.close();
+////			UnitConverge();
+//		}
+//	
+//	}
+//	
+//	public static void main(String[] args) {
+////		UnitConverge();
+//		try {
+//			UnitConverge();
+//		} catch(InputMismatchException e) {
+//			UnitConverge();
+//		}
+//	}
+
+	public static void main(String[] args) {
+		boolean isSuccess = false;
+		Options();
+		while(!isSuccess) {
+		try {
+
+			int menuSelection;
+			menuSelection = scan.nextInt();
+
+
+			while (menuSelection != 3) {
+
+				int v = 0;
+				switch (menuSelection) {
+				case 1:
+					EqualToOne(menuSelection);	
+					v = scan.nextInt();
+					conversion(v, UStoEURO(v));
+					break;
+				case 2:
+					EqualToTwo(menuSelection);
+					v = scan.nextInt();
+					conversion(v, EUROtoUS(v));
+					break;
+				default:
+					MoreThan(menuSelection);
+					System.out.println("Not a valid Number");
+				}
+				System.out.print("Convert again? yes or no ");
+				String goAgain = scan.next();
+				if (goAgain.equals("yes")) { // continue start the loop over from the beginning
+					Options();
+					menuSelection = scan.nextInt();
+					continue;
+				} else if (goAgain.equals("no")) {
+					System.out.println("You Have Closed The Unit Converter");
+					break;
+				}
+			}
+			if (menuSelection == 3) {
+				System.out.println("GoodBye!");
+			}
+			isSuccess = true;
+		} catch (InputMismatchException e) {
+			System.out.println("This isn't a valid entry");
+			System.out.println("\nTRY AGAIN");
+//			scan.close();
+		}
+		break;
+		} 
+
+	}
+}
