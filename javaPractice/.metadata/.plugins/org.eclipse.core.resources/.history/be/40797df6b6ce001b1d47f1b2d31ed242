@@ -1,0 +1,30 @@
+package fixtures;
+
+public class Room {
+	String LivingRoom;
+	String BedRoom;
+	String BathRoom;
+	String Kitchen;
+	String ArcadeRoom;
+	
+	public String getExits() {
+//		return this.LivingRoom, this.BathRoom;
+		String[] = this.BathRoom
+	}
+	
+	public void setExits(String exit) {
+		this.LivingRoom = exit;
+	}
+	
+	public Room(String name, String shortDescription, String longDescription){
+		
+	}
+	
+//	public Room[] getExits() {
+//		
+//	}
+	
+	public Room getExit(String direction) {
+		
+	}
+}

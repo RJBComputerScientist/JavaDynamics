@@ -1,0 +1,9 @@
+package fixtures;
+
+public class Fixture { //(abstract)
+	protected String name;
+	protected String shortDescription;
+	protected String longDescription;
+	
+	
+}

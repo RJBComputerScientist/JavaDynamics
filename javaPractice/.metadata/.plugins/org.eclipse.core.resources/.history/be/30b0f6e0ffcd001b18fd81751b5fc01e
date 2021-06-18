@@ -1,0 +1,10 @@
+package com.example.model;
+
+public interface Swimmer {
+	void swim();
+//	void dive();
+	//^^^making a default for 
+	default void dive() {
+		System.out.println("Diving");
+	}
+}

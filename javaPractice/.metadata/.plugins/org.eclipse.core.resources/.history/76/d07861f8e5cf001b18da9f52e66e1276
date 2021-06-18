@@ -1,0 +1,42 @@
+package fixtures;
+
+public class Room extends Fixture{
+	String LivingRoom;
+	String BedRoom;
+	String BathRoom;
+	String Kitchen;
+	String ArcadeRoom;
+//	private Room[] exits = new Room[5];
+	private Room[] exits;
+	private Fixture[] items;
+//	
+//	public String getExits() {
+////		return this.LivingRoom, this.BathRoom;
+//		String[] = this.BathRoom
+//	}
+
+	
+	public void setExits(String exit) {
+		this.LivingRoom = exit;
+	}
+	
+	
+	public Room(String name, String shortDescription, String longDescription){
+//		this(name, shortDescription, longDescription);
+		super(name, shortDescription, longDescription);
+	}
+	
+	public Room[] getExits() {
+		return this.exits;
+	}
+	
+	public void setExits(Room[] exits) {
+		this.exits = exits;
+	}
+	
+	public void setExits(Room exit, int index) {
+		this.exits[index] = exit;
+	}
+	
+	
+}

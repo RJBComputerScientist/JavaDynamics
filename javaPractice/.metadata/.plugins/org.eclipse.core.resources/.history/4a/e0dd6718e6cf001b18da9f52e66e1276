@@ -1,0 +1,17 @@
+package game;
+
+public class loadPlayer {
+	static RoomManager load = new RoomManager(5);
+	
+	static boolean running = true;
+	
+	public static void main(String[] args) {
+		load.init();
+		Player player = new Player();
+		System.out.println(load.getRoom(""));
+		System.out.println("\nHere is how the game works" +
+				 "\nYou have 5 rooms so far, updates will be added to the game later"+
+				  "\nYour commands are: 'Living Room', 'Home Theater', 'Backyard', 'Bedroom' & 'Kitchen'"+
+				 "");
+	}
+}

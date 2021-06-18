@@ -1,0 +1,13 @@
+package game;
+
+public class loadPlayer {
+	static RoomManager load = new RoomManager(5);
+	
+	static boolean running = true;
+	
+	public static void main(String[] args) {
+		load.init();
+		Player player = new Player();
+		
+	}
+}
